@@ -39,7 +39,7 @@ func defaultVideoDir() string {
 		log.Fatalln(err)
 	}
 
-	return usr.HomeDir + "/Downloads/"
+	return usr.HomeDir + "/Videos/"
 }
 
 func ParseJsonConfig(configPath string) (*Config, error) {
