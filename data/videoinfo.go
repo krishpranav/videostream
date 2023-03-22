@@ -8,7 +8,7 @@ type VideoInfo struct {
 
 type VideoDict map[string]VideoInfo
 
-var videoFormats = []string{".avi", ".mkv", "mp4"}
+var videoFormats = []string{".avi", ".mkv", ".mp4", ".webm", ".wmv"}
 
 func IsStreamableVideoFormat(videoExtension string) bool {
 	for _, format := range videoFormats {
@@ -16,6 +16,5 @@ func IsStreamableVideoFormat(videoExtension string) bool {
 			return true
 		}
 	}
-
 	return false
 }
