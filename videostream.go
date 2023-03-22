@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 
 	"github.com/krishpranav/videostream/data"
@@ -10,10 +11,18 @@ import (
 func initConfig() *data.Config {
 	args := os.Args
 	if len(args) > 1 {
+		configPath := args[1]
 
+		customConfig, err := data.ParseJsonConfig(configPath)
+		if err != nil {
+			log.Fatalln("Failed to load config at ", configPath, err)
+		}
+
+		return customConfig
 	}
 
-	defaultconfig := data.DefaultConfig()
+	defaultConfig := data.DefaultConfig()
+	log.Println("Using default config ", defaultConfig)
 	return defaultConfig
 }
 
