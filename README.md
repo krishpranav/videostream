@@ -6,7 +6,7 @@
 ```
 
 ## License:
-- videostream is licensed in (MIT-License)[https://github.com/krishpranav/videostream/blob/main/LICENSE]
+- videostream is licensed in [MIT-License](https://github.com/krishpranav/videostream/blob/main/LICENSE)
 ```
 MIT License
 
